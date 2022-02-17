@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running in your loc
 
 ### Setting up and Activating a Virtual Environment
 - Create a working space in your local machine
-- Clone this [repository](https://github.com/nicksonlangat/jambopay-bookstore-api.git) `git clone https://github.com/nicksonlangat/jambopay-bookstore-api.git`
+- Clone this [repository](https://github.com/nicksonlangat/digilend-api.git) `git clone https://github.com/nicksonlangat/digilend-api.git`
 - Navigate to the project directory
 - Create a virtual environment `python3 -m venv name_of_your_virtual_environment` and activate it `source name_of_your_virtual_environment/bin/activate`
 - Create a .env file in root directory and put these key=values in it:
@@ -60,3 +60,10 @@ DB_HOST="localhost or any other host name"
 ```
 - You can build the spin up the docker containers by `docker-compose -f docker-compose.yml up --build `
 - Visit `localhost` to view the app running inside the container.
+
+## Running tests
+- Tests can be run by using  `coverage run --source='.' manage.py test `
+- Check coverage report by `coverage report`
+
+## Github CI for tests
+- Tests are also run by a CI workflow upon pushes to the `master`  branch.
